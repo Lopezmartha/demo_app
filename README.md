@@ -6,7 +6,7 @@ All test can be found in the test_demo_app folder. The following commads can be 
 - robot -d result/ test/Ui_User.robot 
 - pytest test/api_user.py 
 
-#  Results from the test can be found in the result folder  #
+###  Results from the test can be found in the result folder  ###
 
 ## Demo App issues ##
 
