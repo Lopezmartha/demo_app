@@ -15,7 +15,8 @@ All test can be found in the test_demo_app folder. The following commads can be 
 
 ###  Results from the test can be found in the result folder  ###
 
-
+1. When users register there is no notification of succusseful registration.
+2. Firstname and Lastname accepts digit.
 
 ## Demo App issues ##
 
