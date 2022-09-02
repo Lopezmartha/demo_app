@@ -1,12 +1,21 @@
 # Signant Health Demo web App #
 
 ## Test Overview ##
+### Installed libraries and commands ###
+pytest 7.1.2
+requests 2.28.1
+robotframework 5.0.1
+robotframework-seleniumlibrary 6.0.0
+selenium 4.4.0
+
 All test can be found in the test_demo_app folder. The following commads can be used to execute the UI and API test;
 
--- robot -d result/ test/Ui_User.robot 
--- pytest test/api_user.py 
+- robot -d result/ test/Ui_User.robot 
+- pytest test/api_user.py 
 
 ###  Results from the test can be found in the result folder  ###
+
+
 
 ## Demo App issues ##
 
