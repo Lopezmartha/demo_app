@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20220902 17:48:45.780" rpa="false" schemaversion="3">
+<suite id="s1" name="Ui User" source="C:\Users\Manuel\Desktop\demo_app\test_demo_app\test\Ui_User.robot">
+<test id="s1-t1" name="Verity User Can Register Through The UI Web Portal" line="9">
+<kw name="Launch Demo App" library="keyword" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220902 17:48:46.347" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8080'.</msg>
+<status status="PASS" starttime="20220902 17:48:46.346" endtime="20220902 17:48:49.364"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:46.343" endtime="20220902 17:48:49.364"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${REGISTER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:49.368" level="INFO">Clicking element '//a[text()="Register"]'.</msg>
+<status status="PASS" starttime="20220902 17:48:49.367" endtime="20220902 17:48:49.731"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Register</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220902 17:48:49.886" level="INFO">Current page contains text 'Register'.</msg>
+<status status="PASS" starttime="20220902 17:48:49.742" endtime="20220902 17:48:49.886"/>
+</kw>
+<kw name="Enter Username" library="keyword">
+<arg>${USER_NAME}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_NAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:49.896" level="INFO">Typing text 't67' into text field '//input[@id="username"]'.</msg>
+<status status="PASS" starttime="20220902 17:48:49.896" endtime="20220902 17:48:50.175"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:49.894" endtime="20220902 17:48:50.175"/>
+</kw>
+<kw name="Enter Password" library="keyword">
+<arg>${PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:50.178" level="INFO">Typing text '123' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20220902 17:48:50.178" endtime="20220902 17:48:50.340"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:50.176" endtime="20220902 17:48:50.340"/>
+</kw>
+<kw name="Enter Firstname" library="keyword">
+<arg>${FIRST_NAME}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIRST_NAME_INPUT}</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:50.343" level="INFO">Typing text 'west' into text field '//input[@id="firstname"]'.</msg>
+<status status="PASS" starttime="20220902 17:48:50.342" endtime="20220902 17:48:50.489"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:50.341" endtime="20220902 17:48:50.490"/>
+</kw>
+<kw name="Enter Lastname" library="keyword">
+<arg>${LAST_NAME}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LAST_NAME_INPUT}</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:50.492" level="INFO">Typing text 'tommy' into text field '//input[@id="lastname"]'.</msg>
+<status status="PASS" starttime="20220902 17:48:50.491" endtime="20220902 17:48:50.657"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:50.490" endtime="20220902 17:48:50.657"/>
+</kw>
+<kw name="Enter Phone Number" library="keyword">
+<arg>${PHONE}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PHONE_NUMBER_INPUT}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:50.660" level="INFO">Typing text '45677545' into text field '//input[@id="phone"]'.</msg>
+<status status="PASS" starttime="20220902 17:48:50.659" endtime="20220902 17:48:50.851"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:50.658" endtime="20220902 17:48:50.851"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Register</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:50.853" level="INFO">Clicking button 'Register'.</msg>
+<status status="PASS" starttime="20220902 17:48:50.851" endtime="20220902 17:48:50.998"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220902 17:48:51.000" endtime="20220902 17:48:53.519"/>
+</kw>
+<doc>This test can shows that user can register through the UI web portal</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20220902 17:48:46.340" endtime="20220902 17:48:53.521"/>
+</test>
+<test id="s1-t2" name="Verify User Can Review Own Information From Main View" line="23">
+<kw name="Launch Demo App" library="keyword" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220902 17:48:53.533" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8080'.</msg>
+<status status="PASS" starttime="20220902 17:48:53.531" endtime="20220902 17:48:56.403"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:53.530" endtime="20220902 17:48:56.405"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOG_IN_TAB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:56.413" level="INFO">Clicking element '//a[text()="Log In"]'.</msg>
+<status status="PASS" starttime="20220902 17:48:56.412" endtime="20220902 17:48:56.633"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Log In</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220902 17:48:56.680" level="INFO">Current page contains text 'Log In'.</msg>
+<status status="PASS" starttime="20220902 17:48:56.639" endtime="20220902 17:48:56.680"/>
+</kw>
+<kw name="Enter Username" library="keyword">
+<arg>${USER_NAME}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_NAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:56.682" level="INFO">Typing text 't67' into text field '//input[@id="username"]'.</msg>
+<status status="PASS" starttime="20220902 17:48:56.682" endtime="20220902 17:48:56.830"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:56.681" endtime="20220902 17:48:56.831"/>
+</kw>
+<kw name="Enter Password" library="keyword">
+<arg>${PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:56.833" level="INFO">Typing text '123' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20220902 17:48:56.832" endtime="20220902 17:48:57.023"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:56.831" endtime="20220902 17:48:57.024"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220902 17:48:57.027" level="INFO">Clicking button '//input[contains(@value,'Log In')]'.</msg>
+<status status="PASS" starttime="20220902 17:48:57.026" endtime="20220902 17:48:57.683"/>
+</kw>
+<kw name="Page Should Contain Username" library="keyword">
+<arg>${USER_NAME}</arg>
+<kw name="Replace String" library="String">
+<var>${locator}</var>
+<arg>//td[@id="username"][text()=' {usernames}']</arg>
+<arg>{usernames}</arg>
+<arg>${username}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220902 17:48:57.691" level="INFO">${locator} = //td[@id="username"][text()=' t67']</msg>
+<status status="PASS" starttime="20220902 17:48:57.686" endtime="20220902 17:48:57.691"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220902 17:48:57.692" endtime="20220902 17:48:57.761"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220902 17:48:57.774" level="INFO">Current page contains element '//td[@id="username"][text()=' t67']'.</msg>
+<status status="PASS" starttime="20220902 17:48:57.761" endtime="20220902 17:48:57.774"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:57.685" endtime="20220902 17:48:57.774"/>
+</kw>
+<kw name="Page Should Contain First Name" library="keyword">
+<arg>${FIRST_NAME}</arg>
+<kw name="Replace String" library="String">
+<var>${locator}</var>
+<arg>//table[@id="content"]//td[@id="firstname"][text()=" {firstnames} " ]</arg>
+<arg>{firstnames}</arg>
+<arg>${firstname}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220902 17:48:57.777" level="INFO">${locator} = //table[@id="content"]//td[@id="firstname"][text()=" west " ]</msg>
+<status status="PASS" starttime="20220902 17:48:57.776" endtime="20220902 17:48:57.777"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220902 17:48:57.777" endtime="20220902 17:48:57.828"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220902 17:48:57.844" level="INFO">Current page contains element '//table[@id="content"]//td[@id="firstname"][text()=" west " ]'.</msg>
+<status status="PASS" starttime="20220902 17:48:57.828" endtime="20220902 17:48:57.844"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:57.775" endtime="20220902 17:48:57.844"/>
+</kw>
+<kw name="Page Should Contain Last Name" library="keyword">
+<arg>${LAST_NAME}</arg>
+<kw name="Replace String" library="String">
+<var>${locator}</var>
+<arg>//table[@id="content"]//td[@id="lastname"][text()=" {lastnames} "]</arg>
+<arg>{lastnames}</arg>
+<arg>${lastname}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220902 17:48:57.847" level="INFO">${locator} = //table[@id="content"]//td[@id="lastname"][text()=" tommy "]</msg>
+<status status="PASS" starttime="20220902 17:48:57.847" endtime="20220902 17:48:57.848"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220902 17:48:57.848" endtime="20220902 17:48:57.902"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220902 17:48:57.925" level="INFO">Current page contains element '//table[@id="content"]//td[@id="lastname"][text()=" tommy "]'.</msg>
+<status status="PASS" starttime="20220902 17:48:57.903" endtime="20220902 17:48:57.925"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:57.846" endtime="20220902 17:48:57.926"/>
+</kw>
+<kw name="Page Should Contain Phone Number" library="keyword">
+<arg>${PHONE}</arg>
+<kw name="Replace String" library="String">
+<var>${locator}</var>
+<arg>//table[@id="content"]//td[@id="phone"][text()=" {phonenumbers}"]</arg>
+<arg>{phonenumbers}</arg>
+<arg>${phonenumber}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20220902 17:48:57.929" level="INFO">${locator} = //table[@id="content"]//td[@id="phone"][text()=" 45677545"]</msg>
+<status status="PASS" starttime="20220902 17:48:57.928" endtime="20220902 17:48:57.929"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220902 17:48:57.929" endtime="20220902 17:48:57.984"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220902 17:48:58.005" level="INFO">Current page contains element '//table[@id="content"]//td[@id="phone"][text()=" 45677545"]'.</msg>
+<status status="PASS" starttime="20220902 17:48:57.984" endtime="20220902 17:48:58.005"/>
+</kw>
+<status status="PASS" starttime="20220902 17:48:57.927" endtime="20220902 17:48:58.006"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220902 17:48:58.008" endtime="20220902 17:49:00.450"/>
+</kw>
+<doc>This test case shows that user can review their own information with valid infromation from the view</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20220902 17:48:53.527" endtime="20220902 17:49:00.451"/>
+</test>
+<test id="s1-t3" name="Verity User Can Not Login With An Invalid Credentials" line="36">
+<kw name="Launch Demo App" library="keyword" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220902 17:49:00.467" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:8080'.</msg>
+<status status="PASS" starttime="20220902 17:49:00.465" endtime="20220902 17:49:03.300"/>
+</kw>
+<status status="PASS" starttime="20220902 17:49:00.462" endtime="20220902 17:49:03.300"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOG_IN_TAB}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220902 17:49:03.311" level="INFO">Clicking element '//a[text()="Log In"]'.</msg>
+<status status="PASS" starttime="20220902 17:49:03.311" endtime="20220902 17:49:03.559"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Log In</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220902 17:49:03.624" level="INFO">Current page contains text 'Log In'.</msg>
+<status status="PASS" starttime="20220902 17:49:03.564" endtime="20220902 17:49:03.625"/>
+</kw>
+<kw name="Enter Username" library="keyword">
+<arg>${INVALID_USERNAME}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USER_NAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220902 17:49:03.628" level="INFO">Typing text 'Peace' into text field '//input[@id="username"]'.</msg>
+<status status="PASS" starttime="20220902 17:49:03.627" endtime="20220902 17:49:03.893"/>
+</kw>
+<status status="PASS" starttime="20220902 17:49:03.626" endtime="20220902 17:49:03.893"/>
+</kw>
+<kw name="Enter Password" library="keyword">
+<arg>${INVALID_PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220902 17:49:03.900" level="INFO">Typing text '101' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20220902 17:49:03.899" endtime="20220902 17:49:04.072"/>
+</kw>
+<status status="PASS" starttime="20220902 17:49:03.898" endtime="20220902 17:49:04.072"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOG_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220902 17:49:04.074" level="INFO">Clicking button '//input[contains(@value,'Log In')]'.</msg>
+<status status="PASS" starttime="20220902 17:49:04.073" endtime="20220902 17:49:04.323"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${INVALID_LOGIN_WARNING}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220902 17:49:04.376" level="INFO">Current page contains text 'You provided incorrect login details'.</msg>
+<status status="PASS" starttime="20220902 17:49:04.323" endtime="20220902 17:49:04.376"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220902 17:49:04.378" endtime="20220902 17:49:07.782"/>
+</kw>
+<doc>This test case shows that user can not log in with invalid credentials</doc>
+<tag>Functional</tag>
+<status status="PASS" starttime="20220902 17:49:00.458" endtime="20220902 17:49:07.783"/>
+</test>
+<status status="PASS" starttime="20220902 17:48:45.785" endtime="20220902 17:49:07.786"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">Functional</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Ui User">Ui User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
